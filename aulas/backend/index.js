@@ -66,7 +66,7 @@ app.get('/users/:id', (request, response) => {
     })
 });
 */
-
+/*
 app.post('/users', (request, response) => {
     const body = request.body;
     
@@ -77,5 +77,6 @@ app.post('/users', (request, response) => {
         aluno: 'João Vítor'
     })
 });
+*/
 
 app.listen(3333);
