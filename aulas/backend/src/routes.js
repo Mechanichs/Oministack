@@ -1,10 +1,10 @@
 //Imports
-const express = require('express'); //instancia o objeto express.
-const SessionController = require('./controllers/SessionController'); //importa as funcoes que estao sendo executadas dentro do arquivo SessionController na pasta controllers.
-const OngController = require('./controllers/OngController'); //importa as funcoes que estao sendo executadas dentro do arquivo OngController na pasta controllers.
+const express = require('express');                                     //instancia o objeto express.
+const SessionController = require('./controllers/SessionController');   //importa as funcoes que estao sendo executadas dentro do arquivo SessionController na pasta controllers.
+const OngController = require('./controllers/OngController');           //importa as funcoes que estao sendo executadas dentro do arquivo OngController na pasta controllers.
 const IncidentController = require('./controllers/IncidentController'); //importa as funcoes que estao sendo executadas dentro do arquivo IncidentController na pasta controllers.
-const ProfileController = require('./controllers/ProfileController'); //importa as funcoes que estao sendo executadas dentro do arquivo ProfileController na pasta controllers.
-const routes = express.Router(); //instancia o objeto router.
+const ProfileController = require('./controllers/ProfileController');   //importa as funcoes que estao sendo executadas dentro do arquivo ProfileController na pasta controllers.
+const routes = express.Router();                                        //instancia o objeto router.
 
 
 //A rota abaixo cria uma sessao e registra essa sessao no banco de dados
@@ -31,7 +31,7 @@ routes.get('/incidents', IncidentController.index);
 //---------------------------------------------------------------------------------------------------------
 routes.post('/incidents', IncidentController.create);
 
-//
+//A rota abaixo deleta um determinado caso. Apenas funciona se o caso pertencer a ong que esta tentando deleta-lo.
 //---------------------------------------------------------------------------------------------------------
 routes.delete('/incidents/:id', IncidentController.delete); //recebera um "route param" com o id do incident que se quer deletar.
 

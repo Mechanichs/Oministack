@@ -79,14 +79,16 @@ app.post('/users', (request, response) => {
     })
 });
 */
+//Imports
 const express = require('express');
+const cors = require('cors');
 const routes = require('./routes');
 
 const app = express();
 
-app.use(express.json()); //diz para o express onverter o json em um objeto do JS que seja entendivel pela aplicacao
-
-app.use(routes);
+app.use(cors);
+app.use(express.json()); //diz para o express converter o json em um objeto do JS que seja entendivel pela aplicacao
+app.use(routes);         //utiliza as rotas que foram construidas no arquivo ./routes.js.
 
 app.listen(3333);
 
