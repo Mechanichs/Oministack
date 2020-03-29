@@ -17,7 +17,7 @@ routes.get('/ongs', OngController.index);
 
 //A rota abaixo pega as informacoes da ong e armazena no banco de dados (o processo se da dentro do objeto OngController)
 //---------------------------------------------------------------------------------------------------------
-routes.post('/ongs', OngController.create);
+routes.post('/ongs', OngController.xablau);
 
 //A rota abaixo faz a leitura de todos os casos que foram cadastrados por uma determinada ong, e que estao registrados no banco de dados.
 //---------------------------------------------------------------------------------------------------------

@@ -11,7 +11,7 @@ module.exports = {
         return response.json(ongs); //retorna para o usuario o array ongs com todas as informacoes puxadas da tabela ongs no comando assima.
     },
 
-    async create(request, response) { //async indica que a funcao utilizada e assincrona
+    async xablau(request, response) { //async indica que a funcao utilizada e assincrona
         const {name, email, whatsapp, city, uf} = request.body; //armazena todas as informacoes do json(que esta sendo requisitada pelo "request.body") em variaveis especificas para cada informacao.
         
         const id = crypto.randomBytes(4).toString('HEX'); //gera um hexadecimal de 4 bytes com numeros e letras aleatórios

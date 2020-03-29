@@ -86,7 +86,7 @@ const routes = require('./routes');
 
 const app = express();
 
-app.use(cors);
+app.use(cors());
 app.use(express.json()); //diz para o express converter o json em um objeto do JS que seja entendivel pela aplicacao
 app.use(routes);         //utiliza as rotas que foram construidas no arquivo ./routes.js.
 
